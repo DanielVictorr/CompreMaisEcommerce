@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "T-shirt with Tape Details",
+    "price": 120,
+    "rating": 4.5,
+    "image": "/images/dish1.jpg",
+    "category": "New Arrivals",
+    "description": "Risoto cremoso com cogumelos frescos e parmesão."
+  },
+  {
+    "id": 2,
+    "title": "Skinny Fit Jeans",
+    "price": 240,
+    "rating": 3.5,
+    "image": "/images/dish2.jpg",
+    "category": "New Arrivals",
+    "description": "Jeans skinny com corte moderno."
+  },
+  {
+    "id": 3,
+    "title": "Checkered Shirt",
+    "price": 180,
+    "rating": 4.5,
+    "image": "/images/dish3.jpg",
+    "category": "New Arrivals",
+    "description": "Camisa xadrez confortável."
+  },
+  {
+    "id": 4,
+    "title": "Sleeve Striped T-shirt",
+    "price": 130,
+    "rating": 4.5,
+    "image": "/images/dish4.jpg",
+    "category": "New Arrivals",
+    "description": "Camiseta listrada com mangas."
+  },
+  {
+    "id": 5,
+    "title": "Vertical Striped Shirt",
+    "price": 212,
+    "rating": 5.0,
+    "image": "/images/dish5.jpg",
+    "category": "Top Selling",
+    "description": "Camisa listrada vertical."
+  },
+  {
+    "id": 6,
+    "title": "Courage Graphic T-shirt",
+    "price": 145,
+    "rating": 4.0,
+    "image": "/images/dish6.jpg",
+    "category": "Top Selling",
+    "description": "Camiseta com estampa."
+  }
+]
