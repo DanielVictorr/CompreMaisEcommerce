@@ -52,5 +52,23 @@
     "image": "/images/dish6.jpg",
     "category": "Top Selling",
     "description": "Camiseta com estampa."
+  },
+  {
+    "id": 7,
+    "title": "Loose Fit Bermuda Shorts",
+    "price": 70,
+    "rating": 3.0,
+    "image": "/images/dish7.jpg",
+    "category": "Top Selling",
+    "description": "Bermuda com detalhes."
+  },
+  {
+    "id": 8,
+    "title": "Faded Skinny Jeans",
+    "price": 210,
+    "rating": 4.5,
+    "image": "/images/dish8.jpg",
+    "category": "Top Selling",
+    "description": "Calsa jeans preta com detalhes."
   }
 ]

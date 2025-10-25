@@ -22,14 +22,14 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section>
+      <section className="modelos">
         <h2>Novos Modelos</h2>
         <div className="grid">
           {products.filter(p => p.category === 'New Arrivals').map(p => <ProductCard key={p.id} product={p} />)}
         </div>
       </section>
 
-      <section>
+      <section className="vendidos">
         <h2>Mais Vendidos</h2>
         <div className="grid">
           {products.filter(p => p.category === 'Top Selling').map(p => <ProductCard key={p.id} product={p} />)}
