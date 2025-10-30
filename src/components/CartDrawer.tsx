@@ -34,10 +34,15 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ open, onClose }) => {
               <img src={item.image} alt={item.title} />
               <div className="info">
                 <p>{item.title}</p>
-                <span>Qtd: {item.quantity}</span>
+                <div className="addRemove">
+                  <button onClick={() => dispatch({ type: 'REMOVE', product:item })}>-</button>
+                  <span className="qtdItem">Qtd: {item.quantity}</span>
+                  <button onClick={() => dispatch({ type: 'ADD', product:item })}>+</button>
+                </div>
               </div>
+
               <button
-                onClick={() => dispatch({ type: "REMOVE", id: item.id })}
+                onClick={() => dispatch({ type: "REMOVE-ALL", id: item.id })}
                 className="remove-btn"
               >
                 Remover

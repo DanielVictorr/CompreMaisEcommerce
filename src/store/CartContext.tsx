@@ -1,12 +1,14 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { Product } from '../types';
+import { stat } from 'fs';
 
 type CartItem = Product & { quantity: number };
 
 type State = { items: CartItem[] };
 type Action =
   | { type: 'ADD'; product: Product }
-  | { type: 'REMOVE'; id: number }
+  | { type: 'REMOVE'; product: Product }
+  | { type: 'REMOVE-ALL'; id: number }
   | { type: 'CLEAR' }
   | { type: 'SET_FROM_STORAGE'; items: CartItem[] };
 
@@ -21,7 +23,14 @@ function reducer(state: State, action: Action): State {
       }
       return { items: [...state.items, { ...action.product, quantity: 1 }] };
     }
-    case 'REMOVE':
+    case 'REMOVE':{
+      const exists = state.items.find(i => i.id === action.product.id);
+      if (exists) {
+        return { items: state.items.map(i => i.id === action.product.id ? { ...i, quantity: (i.quantity === 0 ? 0 : i.quantity - 1)  } : i) };
+      }
+      return { items: [...state.items, { ...action.product, quantity: 0 }] };
+    }
+    case "REMOVE-ALL":
       return { items: state.items.filter(i => i.id !== action.id) };
     case 'CLEAR':
       return { items: [] };

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { fetchProducts } from '../api/productsApi';
 import ProductCard from '../components/ProductCard';
 import { Product } from '../types';
+import Catalog from './Catalog';
+import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -16,6 +18,8 @@ const Home: React.FC = () => {
         <div className="hero-left">
           <h1>ENCONTRE ROUPAS QUE COMBINEM COM SEU ESTILO</h1>
           <p>Navegue pela nossa diversificada gama de peças meticulosamente elaboradas.</p>
+          
+          <Link to={"/catalog"}><button className="shop">COMPRE AGORA</button></Link>
         </div>
         <div className="hero-right">
           <div className="hero-image">  </div>
